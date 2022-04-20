@@ -5,11 +5,26 @@ body, html {
   background: url(header.jpg) no-repeat center center fixed; 
   background-size: cover;
 }
+.height {
+  height: 94%;
+}
 h1 {
   font-size: 3rem;
   color: #e2dbdb;
 }
-
+a {
+  color: white;
+}
+.navbar-brand {
+  color: white;
+}
+li {
+  display: inline flex;
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
+  justify-content: center;
+  transition-property: all 1s;
+}
 .btn {
   font-weight: 700;
   border-radius: 300px;
@@ -33,7 +48,15 @@ hr {
     border-color: #F05F44;
     border-width: 3px;
     max-width: 65px;
-} 
+}  
 .buffer {
    height: 10rem;
+}
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li:hover {
+  transform: scale(1.1);
 }
