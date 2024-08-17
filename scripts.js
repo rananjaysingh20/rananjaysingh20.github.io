@@ -6,17 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
 document
   .getElementById("scrollArrowDown")
   .addEventListener("click", function () {
-    const isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
     window.scrollBy({
-      top: isMobile ? window.innerHeight : window.innerHeight * 0.85,
+      top: window.innerHeight * 0.85,
       behavior: "smooth",
     });
   });
 
 document.getElementById("scrollArrowUp").addEventListener("click", function () {
-  const isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
   window.scrollBy({
-    top: isMobile ? -window.innerHeight : -window.innerHeight * 0.85,
+    top: -window.innerHeight * 0.85,
     behavior: "smooth",
   });
 });
