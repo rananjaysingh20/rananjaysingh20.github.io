@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 document
   .getElementById("scrollArrowDown")
   .addEventListener("click", function () {
+    const isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
     window.scrollBy({
-      top: window.innerHeight * 0.85,
+      top: isMobile ? window.innerHeight : window.innerHeight * 0.85,
       behavior: "smooth",
     });
   });
@@ -34,11 +35,11 @@ items.forEach((item) => {
   });
 });
 
-window.addEventListener('scroll', function() {
-  const button = document.getElementById('scrollArrowUp');
+window.addEventListener("scroll", function () {
+  const button = document.getElementById("scrollArrowUp");
   if (this.window.scrollY > 100) {
-    button.classList.add('makeVisible');
+    button.classList.add("makeVisible");
   } else {
-    button.classList.remove('makeVisible');
+    button.classList.remove("makeVisible");
   }
 });
