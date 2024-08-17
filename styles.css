@@ -514,8 +514,19 @@ header {
     width: 100%;
 }
 
+.mobile {
+    display: none;
+}
+
 @media (max-width: 600px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
     body, html {
+        overflow-x: hidden;
         margin: 0;
         padding: 0;
         width: 100%;
