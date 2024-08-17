@@ -1,0 +1,635 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+section {
+    /* background-color: chocolate; */
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    background-color: white;
+    height: 8vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* Background color of the loader screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure loader is on top of all elements */
+}
+
+/* Spinner Wrapper */
+.spinner-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spinner */
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    animation: spin 1s linear infinite;
+}
+
+/* Static Image */
+.spinner-wrapper img {
+    height: 30px;
+    position: relative;
+    /* Ensure image stays static inside spinner */
+    z-index: 1;
+    /* Make sure the image is above the spinner */
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.illuminating-div {
+    width: 70px;
+    /* Adjust size as needed */
+    height: 70px;
+    border-radius: 15px;
+    /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffefe;
+    /* Base background color */
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    /* Initial shadow */
+    animation: pulse 2s infinite;
+    /* Pulsing animation */
+    cursor: pointer;
+}
+
+/* Pulsing Animation */
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6), 0 0 90px rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* Image Inside the Div */
+.illuminating-div img {
+    height: 40px;
+    border-radius: 50%;
+    /* Optional: Make the image circular */
+}
+
+/* Container for Images */
+.image-container {
+    position: relative;
+    width: 500px;
+    /* Set the container width */
+    height: 500px;
+    /* Set the container height */
+}
+
+/* Base Image Style */
+.image {
+    position: absolute;
+    height: 80%;
+    /* Adjust based on container */
+}
+
+/* Custom Styles for Each Image */
+.image1 {
+    z-index: 2;
+    /* Set the stacking order */
+}
+
+.image2 {
+    z-index: 1;
+    /* Set the stacking order above image1 */
+    height: 550px;
+    rotate: -10deg;
+    left: -80px;
+    top: -50px;
+}
+
+.aboutme-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-start {
+    font-size: 16px;
+    color: brown;
+}
+
+.intro-name {
+    font-size: 40px;
+}
+
+.descript {
+    font-size: 40px;
+    opacity: 0.6;
+}
+
+/* Minimal Button Styles */
+.aboutme-button {
+    background-color: #fff;
+    /* White background */
+    border: 2px solid #ccc;
+    /* Light gray border */
+    color: #333;
+    /* Dark gray text color */
+    font-size: 16px;
+    /* Text size */
+    padding: 10px 20px;
+    /* Padding around text */
+    border-radius: 4px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, border-color 0.3s;
+    /* Smooth transition for hover effect */
+    outline: none;
+
+    /* Remove default focus outline */
+    &:hover {
+        background-color: #f0f0f0;
+        /* Light gray background on hover */
+        border-color: #999;
+        /* Darker border on hover */
+    }
+}
+
+.navigator-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    bottom: 10px;
+}
+.top-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#scrollArrowUp {
+    display: none;
+}
+
+#scrollArrowUp.makeVisible {
+    display: block;
+}
+
+/* Arrow Button Styles */
+.arrow-button {
+    background-color: #fff;
+    /* White background */
+    border: 2px solid #ccc;
+    /* Light gray border */
+    color: #333;
+    /* Dark gray color */
+    border-radius: 4px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding around the SVG */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    display: flex;
+    justify-content: center;
+    /* Center the SVG horizontally */
+    align-items: center;
+    /* Center the SVG vertically */
+    transition: background-color 0.3s, border-color 0.3s;
+    /* Smooth transition */
+    outline: none;
+    /* Remove default focus outline */
+    position: relative;
+
+    /* For positioning the pulsating effect */
+    &:hover {
+        background-color: #f0f0f0;
+        /* Light gray background on hover */
+        border-color: #999;
+        /* Darker border on hover */
+    }
+}
+
+.arrow-button svg {
+    width: 24px;
+    /* Size of the arrow icon */
+    height: 24px;
+    /* Size of the arrow icon */
+    stroke: #333;
+    /* Color of the arrow icon */
+    animation: arrowPulse 2s infinite;
+    /* Pulsating animation */
+}
+
+/* Pulsating Animation */
+@keyframes arrowPulse {
+    0% {
+        transform: scale(1);
+        /* Normal size */
+        opacity: 1;
+        /* Fully opaque */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Enlarged size */
+        opacity: 0.5;
+        /* Semi-transparent */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Back to normal size */
+        opacity: 1;
+        /* Fully opaque */
+    }
+}
+
+.aboutme-img-container {
+    height: 230px;
+    width: 230px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+}
+
+.aboutme-img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    /* White overlay with 30% opacity */
+    pointer-events: none;
+    /* Allow clicks to pass through */
+    opacity: 0.3;
+
+}
+
+.company-image-container {
+    height: 60px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.company-image {
+    object-fit: contain;
+    height: 100%;
+    filter: grayscale(100%) brightness(0%);
+}
+
+.description-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    justify-content: space-between;
+    width: 560px;
+}
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px;
+}
+
+.experience-container {
+    display: flex;
+    width: 100%;
+    width: 650px;
+    margin: 0 auto;
+    height: 240px;
+    margin-left: 20px;
+}
+
+.experience-list {
+    flex: 1;
+    list-style-type: none;
+    cursor: pointer;
+    padding-left: 0px;
+    border-left: 1px solid brown;
+}
+
+.list-item {
+    padding: 10px;
+    margin: 5px 0;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.list-item:hover {
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+}
+
+.list-item.active {
+    border-left: 4px solid brown;
+    /* Highlight color for selected item */
+}
+
+.description {
+    flex: 5;
+    padding-top: 20px;
+}
+
+.description>div {
+    display: none;
+    margin: 0;
+    font-size: 15px;
+}
+
+.description > div.active {
+    display: flex;
+    height: 220px;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 70%;
+    max-width: 1200px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.tile {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.tile img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tile h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.tile p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tile {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .tile {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.input-container {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+}
+.input-container label {
+    width: 140px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 70px;
+}
+.input-container input {
+    width: 300px;
+    height: 30px;
+}
+.input-container textarea {
+    height: 200px;
+    width: 300px;
+}
+.form-btn {
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+.my-description {
+    width: 300px;
+}
+
+.headings {
+    font-size: 28px;
+    font-weight: 700;
+}
+.technologies {
+    font-size: 18px;
+    padding-top: 20px; 
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+    }
+    header {
+        padding: 10px;
+        width: 100%;
+        z-index: 1000;
+        background-color: inherit;
+    }
+    #loader {
+        height: 100vh;
+        width: 100vw;
+    }
+    section {
+        width: 100vw;
+        height: 100vh;
+        align-items: flex-start;
+    }
+    .section-container {
+        padding-top: 40px;
+    }
+    .aboutme-container {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .image-container {
+        height: 350px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .image1 {
+        height: 100%;
+    }
+    .image2 {
+        height: 490px;
+        left: -60px;
+        top: -40px;
+        rotate: -5deg;
+    }
+    .headings {
+        width: 90%;
+        font-size: 24px;
+    }
+    .description-container {
+        width: 90%;
+    }
+    .my-description {
+        width: 65%;
+        font-size: 13px;
+        padding-right: 15px;
+    }
+    .aboutme-img-container {
+        height: 150px;
+        width: 150px;
+    }
+    .technologies {
+        width: 90%;
+    }
+    .resume-container {
+        height: 290px;
+    }
+    .aboutme-section {
+        justify-content: space-between;
+        height: 70%;
+    }
+    .experience-section {
+        height: 70%;
+        width: 100%;
+    }
+    .experience-container {
+        width: 100%;
+        height: 350px;
+    }
+    .experience-list {
+        font-size: 12px;
+    }
+    #desc1, #desc2, #desc3 {
+        font-size: 12px;
+        width: 80%;
+        height: 100%;
+    }
+    .company-image-container {
+        height: 40px;
+    }
+    .project-container {
+        width: 100%;
+        height: 550px;
+        justify-content: space-between;
+    }
+    .tiles-container {
+        overflow-x: auto;
+        height: 480px;
+        width: 300px;
+        flex-direction: column;
+    }
+    
+    .tile {
+        max-width: none;
+        height: 80%;
+        width: 80%;
+        flex: auto;
+    }
+    .contact-container {
+        width: 100%;
+        height: 550px;
+        justify-content: space-between;
+    }
+    .form-container, .form-btn {
+        width: 380px;
+    }
+}

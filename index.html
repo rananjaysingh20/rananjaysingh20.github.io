@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RS.</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner-wrapper">
+            <div class="spinner"></div>
+            <img src="./assets/favicon.png" alt="favicon" />
+        </div>
+    </div>
+    <div id="content">
+        <header>
+            <div class="illuminating-div">
+                <img src="./assets/favicon.png" alt="Illuminated Image">
+            </div>
+            <div class="navigator-button top-button">
+                <button class="arrow-button" id="scrollArrowUp">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 15l7-7 7 7" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="section1">
+                <div class="section-container">
+                    <div class="aboutme-container">
+                        <div class="image-container">
+                            <img src="./assets/devimg.png" alt="devimg" class="image image1" />
+                            <img src="./assets/brushbg.png" alt="brushbg" class="image image2" />
+                        </div>
+                        <div class="intro">
+                            <div class="intro-start">Hi, my name is</div>
+                            <div class="intro-name">Rananjay Singh.</div>
+                            <div class="descript">I build web stuff.</div>
+                            <p>I love turning ideas into beautiful websites.<br />
+                                Using my skills, I create user-friendly experiences<br />
+                                that are both engaging and easy to use.<br />
+                                Currently focused in shaping domain.com <br />
+                                with clean, responsive designs at <span style="color: brown;"><a
+                                        href="https://newfold.com/" target="_blank"
+                                        style="text-decoration: none;color: inherit;">Newfold</a></span>.</p>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/rananjay-singh-79571b1b9/" target="_blank"
+                        style="text-decoration: none;color: inherit;">
+                        <button class="aboutme-button">Let's connect</button>
+                    </a>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="section-container aboutme-section">
+                    <div class="headings">About Me.___________________________</div>
+                    <div class="description-container">
+                        <div class="my-description">
+                            Hi there! I'm a web developer and engineer with a passion for crafting engaging digital
+                            experiences. When I'm not working on engineering projects, you'll find me immersed in
+                            developing websites as a hobby. I love turning creative ideas into functional, user-friendly
+                            sites and am always excited to explore new technologies and design trends.<br /><br />
+                            My interest in computers began when I was just 12 years old in school. That early
+                            fascination
+                            with technology sparked a lifelong journey into development. Over the years, I’ve dedicated
+                            myself to honing my skills and diving deep into the world of web development, always eager
+                            to
+                            learn and grow in this ever-evolving field.
+                        </div>
+                        <div class="resume-container">
+                            <div class="aboutme-img-container">
+                                <img src="./assets/squareimg.jpg" alt="aboutme" />
+                            </div>
+                            <a class="aboutme-button" href="./assets/Rananjay Singh Resume.pdf" download
+                                style="text-align: center;text-decoration: none;color: inherit;">
+                                Download resume
+                            </a>
+                        </div>
+                    </div>
+                    <div class="technologies">These are a few technologies I have
+                        been working with recently:</div>
+                    <div style="width: 100%; display: flex; flex-direction: row; font-size: 12px;line-height: 22px;">
+                        <ul>
+                            <li>JavaScript (ES6)</li>
+                            <li>ReactJS</li>
+                            <li>Angular</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                        <ul>
+                            <li>NodeJS</li>
+                            <li>ExpressJS</li>
+                            <li>MongoDB</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section3">
+                <div class="section-container experience-section">
+                    <div class="headings">My experiences.___________________________</div>
+                    <div class="experience-container">
+                        <ul class="experience-list">
+                            <li class="list-item active" data-description="desc1">NewFold</li>
+                            <li class="list-item" data-description="desc2">GLG</li>
+                            <li class="list-item" data-description="desc3">Capegemini</li>
+                        </ul>
+                        <div class="description">
+                            <div id="desc1" class="active">
+                                <div class="desig"
+                                    style="font-size: 16px; font-weight: 600;color: gray;padding-bottom: 10px;">Senior
+                                    Software Engineer | May, 2023 - Present</div>
+                                <li>Working as a senior front end developer in the domain.com team.</li>
+                                <li>Migrated storefront to a new backend, to enhance performance.</li>
+                                <li>Transitioned front end from React to Angular, for code maintainability.</li>
+                                <li>Developed responsive UI components, optimizing user experience.</li>
+                                <li>Implemented best practices in testing and code reviews.</li>
+                                <div class="company-image-container">
+                                    <img class="company-image"
+                                        src="https://newfold.com/content/experience-fragments/newfold/site-header/master/_jcr_content/root/header/logo.coreimg.svg/1685650428786/newfold-logo.svg"
+                                        alt="newfold" />
+                                </div>
+                            </div>
+                            <div id="desc2">
+                                <div class="desig"
+                                    style="font-size: 16px; font-weight: 600;color: gray;padding-bottom: 10px;">
+                                    Associate Programmer | Jan, 2021 - April, 2023</div>
+                                <li>Developed dynamic web-surveys using JavaScript to gather data for global clients.
+                                </li>
+                                <li>Collaborated with clients to tailor surveys for specific product and service
+                                    insights.</li>
+                                <li>Ensured accuracy and reliability of data collection through robust programming.</li>
+                                <li>Contributed to delivering actionable insights that supported client decision-making.
+                                </li>
+                                <div class="company-image-container">
+                                    <img class="company-image"
+                                        src="https://glginsights.com/assets/img/glg-logo.4d35fd1b.svg" alt="newfold" />
+                                </div>
+                            </div>
+                            <div id="desc3">
+                                <div class="desig"
+                                    style="font-size: 16px; font-weight: 600;color: gray;padding-bottom: 10px;">
+                                    Engineering Trainee | Dec 2019 - Feb 2020 </div>
+                                <li>Completed hands-on training in web development, focusing on HTML, CSS, JavaScript,
+                                    and modern frameworks.</li>
+                                <li>Developed and deployed multiple web applications, gaining practical experience in
+                                    building and maintaining functional websites.</li>
+                                <li>Utilized problem-solving skills to address technical challenges and ensure optimal
+                                    performance and user experience.</li>
+                                <li>Collaborated on projects to translate client requirements into effective and
+                                    user-friendly web solutions.</li>
+                                <div class="company-image-container">
+                                    <img class="company-image"
+                                        src="https://www.capgemini.com/in-en/wp-content/themes/capgemini2020/assets/images/logo.svg"
+                                        alt="newfold" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section4">
+                <div class="section-container project-container">
+                    <div class="headings">Some things I have built.___________________________
+                    </div>
+                    <div class="tiles-container">
+                        <div class="tile">
+                            <div>
+                            <img src="https://i.ibb.co/cN7S4Cd/img1.png" alt="Project 1">
+                            <h3>RE-FLOW.</h3>
+                            <p>It is an e-commerce website built using React and REDUX, where user can register,
+                                sign-in, add products to cart and even checkout using the Stripe payment gateway!</p>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <div>
+                            <img src="https://i.ibb.co/g6X6bMM/img10.png" alt="Project 2">
+                            <h3>Face Recog</h3>
+                            <p>This is a hobby project that uses the Clarifai machine learning API, and user can upload
+                                image links and it generates an output of the same image with a box enclosing the
+                                detected faces in the image.</p>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <div>
+                            <img src="https://i.ibb.co/PzQkcmx/img7.png" alt="Project 3">
+                            <h3>Gradient Gen</h3>
+                            <p>Gradient Gen is a basic HTML, CSS and JavaScript project, created due to the constant
+                                need of searching for linear gradients online. This webpage allows us to set the
+                                gradient of the html page in real time and we can choose what looks best according to
+                                our needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section5">
+                <div class="section-container contact-container">
+                    <div class="headings">Let's connect.___________________________</div>
+                    <div>
+                        <form method="POST" action="https://public.herotofu.com/v1/f7215e70-5c6b-11ef-b675-51969bcd4265"
+                            method="post" accept-charset="UTF-8">
+                            <div class="form-container">
+                                <div class="input-container">
+                                    <label for="full_name">Your name</label>
+                                    <input name="name" placeholder="Joe Bloggs" id="full_name" type="text" />
+                                </div>
+                                <div class="input-container">
+                                    <label for="email_address">Email address</label>
+                                    <input name="email" placeholder="joe.bloggs@example.com" id="email_address" type="email"
+                                        class="validate" required />
+                                </div>
+                                <div class="input-container">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" class="materialize-textarea validate"
+                                        placeholder="Tell us what you're thinking about..."></textarea>
+                                </div>
+                                <div class="form-btn">
+                                    <button type="submit" class="aboutme-button">
+                                        Contact Us
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            </section>
+        </main>
+        <div class="navigator-button">
+            <button class="arrow-button" id="scrollArrowDown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 RS. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
