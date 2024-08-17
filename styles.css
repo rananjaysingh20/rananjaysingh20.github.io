@@ -546,6 +546,7 @@ header {
         width: 100vw;
         height: 100vh;
         align-items: flex-start;
+        overflow-x: hidden;
     }
     .section-container {
         padding-top: 40px;
