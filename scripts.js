@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("content").classList.add("visible");
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").classList.add("visible");  
+  }, 1000);
 });
 
 document
